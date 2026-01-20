@@ -3,8 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "../doc-and-landing-components/src/**/*.{js,ts,jsx,tsx}",
-    "../doc-and-landing-components/dist/**/*.js",
+    "./node_modules/documentation-template/dist/**/*.{js,ts,jsx,tsx}",
   ],
   darkClass: 'class',
   theme: {
