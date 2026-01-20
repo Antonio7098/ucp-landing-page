@@ -118,33 +118,51 @@ export function LandingPage() {
             <span className="tracking-tight">UCP</span>
           </a>
         }
-        links={[
-          {
-            label: 'Documentation',
-            children: [
-              { label: 'Getting Started', href: '/docs/getting-started/quick-start' },
-              { label: 'UCM Core', href: '/docs/ucm-core' },
-              { label: 'UCM Engine', href: '/docs/ucm-engine' },
-              { label: 'UCL Parser', href: '/docs/ucl-parser' },
-              { label: 'Translators', href: '/docs/translators/markdown' },
-              { label: 'API & Tools', href: '/docs/ucp-api' },
-              { label: 'LLM Utilities', href: '/docs/ucp-llm' },
-              { label: 'Observability', href: '/docs/ucp-observe' },
-              { label: 'Examples', href: '/docs/examples/basic' },
-              { label: 'Conformance', href: '/docs/conformance' },
-            ],
-          },
-        ]}
+        links={[]}
         actions={
-          <a
-            href="https://github.com/Antonio7098/unified-content-protocol"
-            className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-border hover:bg-accent transition-colors"
-            aria-label="UCP on GitHub"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github className="w-5 h-5" />
-          </a>
+          <div className="flex items-center gap-4">
+            <div className="relative group">
+              <button
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/60 text-sm font-medium text-muted-foreground hover:text-foreground hover:border-border transition-colors"
+              >
+                Documentation
+                <ChevronRight className="w-4 h-4 group-hover:rotate-90 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-popover border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="p-2">
+                  {[
+                    { label: 'Getting Started', href: '/docs/getting-started/quick-start' },
+                    { label: 'UCM Core', href: '/docs/ucm-core' },
+                    { label: 'UCM Engine', href: '/docs/ucm-engine' },
+                    { label: 'UCL Parser', href: '/docs/ucl-parser' },
+                    { label: 'Translators', href: '/docs/translators/markdown' },
+                    { label: 'API & Tools', href: '/docs/ucp-api' },
+                    { label: 'LLM Utilities', href: '/docs/ucp-llm' },
+                    { label: 'Observability', href: '/docs/ucp-observe' },
+                    { label: 'Examples', href: '/docs/examples/basic' },
+                    { label: 'Conformance', href: '/docs/conformance' },
+                  ].map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      className="block px-3 py-2 text-sm hover:bg-accent rounded-md transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://github.com/Antonio7098/unified-content-protocol"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-border hover:bg-accent transition-colors"
+              aria-label="UCP on GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+          </div>
         }
       />
 
