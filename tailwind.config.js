@@ -59,6 +59,56 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+            color: 'hsl(var(--foreground))',
+            a: {
+              color: 'hsl(var(--primary))',
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+            'h1, h2, h3, h4': {
+              color: 'hsl(var(--foreground))',
+              fontWeight: '600',
+            },
+            code: {
+              color: 'hsl(var(--code-foreground))',
+              backgroundColor: 'hsl(var(--code))',
+              padding: '0.25rem 0.375rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+            },
+            'code::before': {
+              content: '""',
+            },
+            'code::after': {
+              content: '""',
+            },
+            pre: {
+              backgroundColor: 'hsl(var(--code))',
+              color: 'hsl(var(--code-foreground))',
+            },
+            blockquote: {
+              borderLeftColor: 'hsl(var(--border))',
+              color: 'hsl(var(--muted-foreground))',
+            },
+            hr: {
+              borderColor: 'hsl(var(--border))',
+            },
+            'thead th': {
+              color: 'hsl(var(--foreground))',
+              borderBottomColor: 'hsl(var(--border))',
+            },
+            'tbody td': {
+              borderBottomColor: 'hsl(var(--border))',
+            },
+          },
+        },
+      },
       animation: {
         gradient: 'gradient 3s ease infinite',
       },

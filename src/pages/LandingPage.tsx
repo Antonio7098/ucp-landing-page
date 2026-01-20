@@ -23,7 +23,6 @@ import {
   Section,
   SectionTitle,
   Hero,
-  HeroBadge,
   HeroBackground,
   FeatureCard,
   FeatureGrid,
@@ -123,32 +122,29 @@ export function LandingPage() {
           {
             label: 'Documentation',
             children: [
-              { label: 'Getting Started', href: '/docs/getting-started' },
-              { label: 'Core Concepts', href: '/docs/getting-started/concepts' },
+              { label: 'Getting Started', href: '/docs/getting-started/quick-start' },
               { label: 'UCM Core', href: '/docs/ucm-core' },
+              { label: 'UCM Engine', href: '/docs/ucm-engine' },
               { label: 'UCL Parser', href: '/docs/ucl-parser' },
-            ],
-          },
-          {
-            label: 'Resources',
-            children: [
-              { label: 'Examples', href: '/docs/examples' },
-              { label: 'API Reference', href: '/docs/ucp-api' },
+              { label: 'Translators', href: '/docs/translators/markdown' },
+              { label: 'API & Tools', href: '/docs/ucp-api' },
               { label: 'LLM Utilities', href: '/docs/ucp-llm' },
               { label: 'Observability', href: '/docs/ucp-observe' },
+              { label: 'Examples', href: '/docs/examples/basic' },
+              { label: 'Conformance', href: '/docs/conformance' },
             ],
           },
-          { label: 'GitHub', href: 'https://github.com/Antonio7098/unified-content-protocol' },
         ]}
         actions={
-          <div className="flex items-center gap-3">
-            <NavButton variant="ghost" href="/docs">
-              Docs
-            </NavButton>
-            <NavButton variant="primary" href="/docs/getting-started" showArrow>
-              Get Started
-            </NavButton>
-          </div>
+          <a
+            href="https://github.com/Antonio7098/unified-content-protocol"
+            className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-border hover:bg-accent transition-colors"
+            aria-label="UCP on GitHub"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github className="w-5 h-5" />
+          </a>
         }
       />
 
@@ -157,22 +153,20 @@ export function LandingPage() {
         size="xl"
         layout="left"
         contentAlign="left"
+        containerSize="xl"
         className="pt-24 md:pt-32"
-        badge={
-          <HeroBadge variant="outline" showArrow href="/docs/getting-started">
-            v1.0 now available
-          </HeroBadge>
-        }
+        badge={undefined}
         title={
-          <span className="block">
-            Unified Content Protocol
-          </span>
+          <>
+            <span className="block whitespace-nowrap">Unified Content</span>
+            <span className="block">Protocol</span>
+          </>
         }
         subtitle="A modern protocol for managing structured content as directed acyclic graphs. Graph-based relationships, LLM-optimized, immutable by design."
         actions={[
           {
             label: 'Get Started',
-            href: '/docs/getting-started',
+            href: '/docs/getting-started/quick-start',
             variant: 'primary',
           },
           {
@@ -221,7 +215,7 @@ export function LandingPage() {
                 <NavButton variant="primary" href="/docs">
                   Read the docs
                 </NavButton>
-                <NavButton variant="ghost" href="/docs/examples" icon={<Code2 className="w-4 h-4" />}>
+                <NavButton variant="ghost" href="/docs/examples/basic" icon={<Code2 className="w-4 h-4" />}>
                   View examples
                 </NavButton>
               </div>
@@ -436,7 +430,7 @@ export function LandingPage() {
         title="Ready to structure your content?"
         description="Start building with UCP today. Graph-based, LLM-ready, and designed for the future of content management."
         actions={[
-          { label: 'Get Started', href: '/docs/getting-started', variant: 'primary' },
+          { label: 'Get Started', href: '/docs/getting-started/quick-start', variant: 'primary' },
           { label: 'View Documentation', href: '/docs', variant: 'outline' },
         ]}
       />
@@ -456,10 +450,10 @@ export function LandingPage() {
           {
             title: 'Documentation',
             links: [
-              { label: 'Getting Started', href: '/docs/getting-started' },
+              { label: 'Getting Started', href: '/docs/getting-started/quick-start' },
               { label: 'Core Concepts', href: '/docs/getting-started/concepts' },
               { label: 'UCM Core', href: '/docs/ucm-core' },
-              { label: 'Examples', href: '/docs/examples' },
+              { label: 'Examples', href: '/docs/examples/basic' },
             ],
           },
           {
