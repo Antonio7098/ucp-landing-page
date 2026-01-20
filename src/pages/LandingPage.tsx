@@ -37,7 +37,7 @@ import {
   Footer,
   StatsSection,
   GradientText,
-} from '../components/landing';
+} from 'documentation-template';
 
 const rustBlockCode = `// Create a content block with semantic metadata
 use ucm_core::{Block, ContentType, Metadata};
