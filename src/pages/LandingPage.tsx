@@ -122,12 +122,13 @@ export function LandingPage() {
         actions={
           <div className="flex items-center gap-4">
             <div className="relative group">
-              <button
+              <a
+                href="/docs"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/60 text-sm font-medium text-muted-foreground hover:text-foreground hover:border-border transition-colors"
               >
                 Documentation
                 <ChevronRight className="w-4 h-4 group-hover:rotate-90 transition-transform" />
-              </button>
+              </a>
               <div className="absolute top-full left-0 mt-2 w-64 bg-popover border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="p-2">
                   {[
@@ -146,6 +147,7 @@ export function LandingPage() {
                       key={index}
                       href={item.href}
                       className="block px-3 py-2 text-sm hover:bg-accent rounded-md transition-colors"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {item.label}
                     </a>
