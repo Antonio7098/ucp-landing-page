@@ -37,7 +37,7 @@ import {
   Footer,
   StatsSection,
   GradientText,
-} from 'documentation-template';
+} from '../components/landing';
 
 const rustBlockCode = `// Create a content block with semantic metadata
 use ucm_core::{Block, ContentType, Metadata};
@@ -151,7 +151,7 @@ export function LandingPage() {
       {/* Hero Section */}
       <Hero
         size="xl"
-        layout="left"
+        layout="split"
         contentAlign="left"
         containerSize="xl"
         className="pt-24 md:pt-32"
