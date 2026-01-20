@@ -1,0 +1,8 @@
+LEFT PANEL 
+tabs: ucm, md, ucm editor (with doffs and undo), original source (upload button), graph, llm prompt, context window editor
+
+RIGHT PANEL
+tabs: command selector (dropdown options), free commands, llm editor agent chat, command history
+
+BUTTON TOP RIGHT
+logs - opens modal that shows all logs for debug, with a copy buttons
