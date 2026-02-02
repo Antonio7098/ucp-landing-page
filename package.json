@@ -9,7 +9,6 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@ucp-core/core": "0.1.9",
     "clsx": "^2.1.1",
     "documentation-template": "^1.0.1",
     "lucide-react": "^0.562.0",
